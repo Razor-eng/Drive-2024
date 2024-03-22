@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  height: auto;
+  background-color: #f8fafd;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 250px auto 60px;
+  height: 100vh;
+}
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: lightseagreen;
+}
+.login div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 50px;
+  border-radius: 12px;
+  background: lightcyan;
+}
+.login img {
+  width: 100px;
+}
+.login button {
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 30px;
+  background: lightskyblue;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: 230ms ease-in-out;
+}
+.login button:hover {
+  background: lightsteelblue;
+  box-shadow: 2px 2px 2px gray;
+}
+
+@media (max-width: 600px) {
+  .App {
+    transition: all 300ms ease-in-out;
+    grid-template-columns: 80px auto 60px;
+  }
+}
+
+@media (max-width: 300px) {
+  .App {
+    grid-template-columns: 30px auto 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .App {
+    grid-template-columns: 80px auto 0;
+  }
+  .login div {
+    padding: 10px;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login button {
+    width: 100%;
+    font-size: 10px;
+  }
+}

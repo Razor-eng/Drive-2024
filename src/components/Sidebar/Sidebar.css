@@ -1,0 +1,250 @@
+progress[value] {
+  --color: #4285f4;
+  --background: #dadcde;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 90%;
+  height: 5px;
+  border-radius: 10em;
+}
+progress[value]::-webkit-progress-bar {
+  border-radius: 10em;
+  background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+  border-radius: 10em;
+  background: var(--color);
+}
+progress[value]::-moz-progress-bar {
+  border-radius: 10em;
+  background: var(--color);
+}
+
+.sidebar {
+  margin-top: 10px;
+}
+.sidebar_btn button {
+  background-color: transparent;
+  border: 0.2px solid lightgray;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 16px 17px;
+  margin-left: 13px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 50ms ease-in-out;
+  box-shadow: 1px 2px 3px #ccc;
+}
+.sidebar_btn button:hover {
+  box-shadow: 1px 2px 7px #ccc;
+}
+.sidebar_btn button:active {
+  scale: 0.92;
+}
+.sidebar_btn button span {
+  font-size: 16px;
+  margin-left: 8px;
+  background-color: transparent;
+}
+
+.sidebar_option {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+.sidebar_option:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.sidebar_option svg.MuiSvgIcon-root {
+  font-size: 20px;
+}
+.sidebar_option span {
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(78, 78, 78);
+}
+
+.sidebar_option.active {
+  background-color: #c2e7ff;
+}
+
+.progress_bar {
+  padding: 0 20px;
+  margin-left: 15px;
+}
+.progress_bar span {
+  display: block;
+  font-size: 13px;
+  color: #333;
+}
+
+.modal {
+  top: 50%;
+  background-color: #fff;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-50%);
+  padding: 10px;
+  border-radius: 10px;
+}
+.modalHead {
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  height: 40px;
+}
+.modalHead svg {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  cursor: pointer;
+}
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  padding: 20px;
+  margin: 20px;
+  background-color: aliceblue;
+}
+.modalBody .uploading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  > span {
+    margin-top: 5px;
+    font-size: 12px;
+    color: rgb(141, 138, 138);
+  }
+}
+.modalBody input[type="file"] {
+  font-size: 14px;
+  font-weight: 400;
+  border: 0.5px solid lightgray;
+  border-style: dashed;
+  padding: 20px;
+}
+.modalBody input[type="file"]::file-selector-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #4245a8;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  transition: 0.4s;
+}
+.modalBody input[type="file"]::file-selector-button:hover {
+  background-color: #0b57d0;
+}
+input.modalButton {
+  width: 100%;
+  background: #2381fa;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.download {
+  margin-bottom: 75px;
+  width: 100%;
+  height: 90px;
+  background: #c2e7ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 8px;
+}
+.downloadBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 30px 20px;
+}
+.downloadBtn h3 {
+  font-weight: 500;
+  font-size: 14px;
+}
+.downloadBtn button {
+  background: transparent;
+  border-radius: 50px;
+  padding: 4px 20px;
+  border: 1px solid black;
+}
+.downloadBtn button:hover {
+  background: #aad1eb;
+  cursor: pointer;
+}
+
+@media (max-width: 300px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar_option {
+    padding: 10px 0;
+    justify-content: center;
+    margin-left: auto;
+    border-radius: 0;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .modal {
+    width: 100%;
+  }
+  .progress_bar span {
+    font-size: 9px;
+  }
+}
+@media (max-width: 600px) {
+  .sidebar_option span {
+    display: none;
+  }
+  .progress_bar {
+    padding: 0;
+  }
+  .sidebar_btn button {
+    padding: 5px;
+    margin-left: 25px;
+  }
+  .sidebar_btn button span {
+    display: none;
+  }
+  .modalBody input[type="file"] {
+    font-size: 10px;
+    border: none;
+  }
+  .modalBody input[type="file"]::file-selector-button {
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+  }
+  .modalHead {
+    font-size: 14px;
+    height: 30px;
+  }
+}
