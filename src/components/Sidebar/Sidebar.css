@@ -219,6 +219,25 @@ input.modalButton {
   .progress_bar span {
     font-size: 9px;
   }
+  .download {
+    width: 100%;
+    /* padding: 0; */
+    > .downloadBtn {
+      width: 100%;
+      padding: 0;
+      > h3 {
+        font-size: 8px;
+      }
+      > button {
+        width: 100%;
+        font-size: 6px;
+      }
+    }
+    svg {
+      margin-right: 10px;
+      font-size: 10px;
+    }
+  }
 }
 @media (max-width: 600px) {
   .sidebar_option span {
